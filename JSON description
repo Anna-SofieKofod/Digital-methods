@@ -1,0 +1,44 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "resource1",
+      "path": "cholera_n.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer",
+            "format": "default",
+            "title": "year",
+            "description": "Year"
+          },
+          {
+            "name": "total_articles",
+            "type": "integer",
+            "format": "default",
+            "title": "Total articles",
+            "description": "total_articles"
+          },
+          {
+            "name": "kolera",
+            "type": "integer",
+            "format": "default",
+            "title": "kolera",
+            "description": "Spelling Kolera"
+          },
+          {
+            "name": "cholera",
+            "type": "integer",
+            "format": "default",
+            "title": "cholera",
+            "description": "Spelling Cholera"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "Digital methods cholera",
+  "title": "Digital methods cholera"
+}
