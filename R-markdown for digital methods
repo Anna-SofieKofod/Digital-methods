@@ -1,0 +1,15 @@
+library(readr)
+cholera_n <- read_csv("cholera_n.csv")
+View(cholera_n)
+library(ggplot2)  
+library(tidyverse)
+cholera_n <- within(cholera_n, Cholera_P <- 100*cholera/total_articles)
+cholera_n <- within(cholera_n, Kolera_P <- 100*kolera/total_articles)
+cholera_n
+ggplot(cholera_n, aes(x=year)) + 
+  geom_line(aes(y= Cholera_P, colour = "Cholera")) + 
+  geom_line(aes(y= Kolera_P, colour = "Kolera")) +
+              scale_color_manual("", values = c("Kolera" = "orange", "Cholera" = "green")) +
+labs(title = "Percent of newpapers with mention of cholera",
+     x = "Year",
+     y = "Percent")
